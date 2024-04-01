@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Crédito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Consultoria de Crédito</h1>
+    </header>
+
+    <main>        
+        <form id="consultaForm">
+            <input type="number" id="edad" name="edad" required placeholder="Edad">
+
+            <div>
+                <label for="estadoHp">Historial:</label>
+                <select id="estadoHp" name="estadoHp">
+                    <option value="1">Bueno</option>
+                    <option value="0">Malo</option>
+                </select>
+            </div>
+
+            <input type="number" id="ingresos" name="ingresos" required placeholder="Ingresos">
+
+            <input type="number" id="deuda" name="deuda" required placeholder="Deuda">
+
+            <input type="number" id="cantidadActivos" name="cantidadActivos" required placeholder="Cantidad Activos">
+
+            <button type="submit" onclick="mostrarPopup()">Consultar</button>
+        </form>
+
+        <div id="popup" class="popup">
+            <span onclick="cerrarPopup()" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">X</span>
+            <div id="resultado"></div>
+        </div>
+        <div id="overlay" class="overlay"></div>
+    </main>
+
+    <script src="src/app.js"></script>
+</body>
+</html>
